@@ -388,6 +388,44 @@
 </code></pre>
 			</td>
 		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<h2>Intersex Pride Flag</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="intersex" class="flag"></div>
+			</td>
+			<td>
+<pre><code>
+#intersex {
+	background: #ffd800;
+}
+#intersex:before {
+	width: 100px;
+	height: 100px;
+	background: #7902aa;
+	border-radius: 50%;
+	content: "";
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+}
+#intersex:after {
+	width: 80px;
+	height: 80px;
+	background: #ffd800;
+	border-radius: 50%;
+	content: "";
+	position: absolute;
+	left: calc(50% - 40px);
+	top: calc(50% - 40px);
+}
+</code></pre>
+			</td>
+		</tr>
 	</table>
 
 	<style>
@@ -416,6 +454,7 @@
 		.flag {
 			width: 300px;
 			height: 180px;
+			position: relative;
 		}
 
 		#lgbt {
@@ -618,6 +657,30 @@
 				#000000 80%,
 				#000000
 				);
+		}
+
+		#intersex {
+			background: #ffd800;
+		}
+		#intersex:before {
+			width: 100px;
+			height: 100px;
+			background: #7902aa;
+			border-radius: 50%;
+			content: "";
+			position: absolute;
+			left: calc(50% - 50px);
+			top: calc(50% - 50px);
+		}
+		#intersex:after {
+			width: 80px;
+			height: 80px;
+			background: #ffd800;
+			border-radius: 50%;
+			content: "";
+			position: absolute;
+			left: calc(50% - 40px);
+			top: calc(50% - 40px);
 		}
 	</style>
 </body>
