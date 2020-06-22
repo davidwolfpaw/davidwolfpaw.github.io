@@ -482,6 +482,85 @@
 </code></pre>
 			</td>
 		</tr>
+
+		<tr>
+			<td colspan="2">
+				<h2>Progressive Pride Flag</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="progressive" class="flag"></div>
+			</td>
+			<td>
+<pre><code>
+#progressive {
+	background: linear-gradient(
+		to bottom,
+		#e40303,
+		#e40303 16.67%,
+		#ff8c00 16.67%,
+		#ff8c00 33.33%,
+		#ffed00 33.33%,
+		#ffed00 50%,
+		#008026 50%,
+		#008026 66.67%,
+		#004dff 66.67%,
+		#004dff 83.33%,
+		#750787 83.33%,
+		#750787
+		);
+	overflow: hidden;
+}
+#progressive:before {
+	position: absolute;
+	content: "";
+	left: -94px;
+	top: -91px;
+	width: 130px;
+	height: 90px;
+	background: linear-gradient(
+		to bottom,
+		#ffffff,
+		#ffffff 40%,
+		#f6a8b7 40%,
+		#f6a8b7 55%,
+		#5ccefa 55%,
+		#5ccefa 70%,
+		#784f16 70%,
+		#784f16 85%,
+		#000000 85%,
+		#000000
+		);
+	transform: rotate(-135deg) skew(-45deg);
+	transform-origin: 100% 100%;
+}
+#progressive:after {
+	position: absolute;
+	content: "";
+	left: -3px;
+	top: 0px;
+	width: 130px;
+	height: 90px;
+	background: linear-gradient(
+		to bottom,
+		#ffffff,
+		#ffffff 40%,
+		#f6a8b7 40%,
+		#f6a8b7 55%,
+		#5ccefa 55%,
+		#5ccefa 70%,
+		#784f16 70%,
+		#784f16 85%,
+		#000000 85%,
+		#000000
+		);
+	transform: rotate(-45deg) skew(45deg);
+	transform-origin: 100% 100%;
+}
+</code></pre>
+			</td>
+		</tr>
 	</table>
 
 	<style>
@@ -779,6 +858,71 @@
 		#leather:after {
 			left: 40px;
 			transform: rotate(10deg);
+			transform-origin: 100% 100%;
+		}
+
+		#progressive {
+			background: linear-gradient(
+				to bottom,
+				#e40303,
+				#e40303 16.67%,
+				#ff8c00 16.67%,
+				#ff8c00 33.33%,
+				#ffed00 33.33%,
+				#ffed00 50%,
+				#008026 50%,
+				#008026 66.67%,
+				#004dff 66.67%,
+				#004dff 83.33%,
+				#750787 83.33%,
+				#750787
+				);
+			overflow: hidden;
+		}
+		#progressive:before {
+			position: absolute;
+			content: "";
+			left: -94px;
+			top: -91px;
+			width: 130px;
+			height: 90px;
+			background: linear-gradient(
+				to bottom,
+				#ffffff,
+				#ffffff 40%,
+				#f6a8b7 40%,
+				#f6a8b7 55%,
+				#5ccefa 55%,
+				#5ccefa 70%,
+				#784f16 70%,
+				#784f16 85%,
+				#000000 85%,
+				#000000
+				);
+			transform: rotate(-135deg) skew(-45deg);
+			transform-origin: 100% 100%;
+		}
+		#progressive:after {
+			position: absolute;
+			content: "";
+			left: -3px;
+			top: 0px;
+			width: 130px;
+			height: 90px;
+			background: linear-gradient(
+				to bottom,
+				#ffffff,
+				#ffffff 40%,
+				#f6a8b7 40%,
+				#f6a8b7 55%,
+				#5ccefa 55%,
+				#5ccefa 70%,
+				#784f16 70%,
+				#784f16 85%,
+				#000000 85%,
+				#000000
+				);
+			transform: rotate(-45deg) skew(45deg);
 			transform-origin: 100% 100%;
 		}
 	</style>
