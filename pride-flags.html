@@ -426,6 +426,62 @@
 </code></pre>
 			</td>
 		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<h2>Leather Pride Flag</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="leather" class="flag"></div>
+			</td>
+			<td>
+<pre><code>
+#leather {
+	background: linear-gradient(
+		to bottom,
+		#000000,
+		#000000 11.1%,
+		#18186c 11.1%,
+		#18186c 22.2%,
+		#000000 22.2%,
+		#000000 33.3%,
+		#18186c 33.3%,
+		#18186c 44.4%,
+		#ffffff 44.4%,
+		#ffffff 55.5%,
+		#18186c 55.5%,
+		#18186c 66.6%,
+		#000000 66.6%,
+		#000000 77.7%,
+		#18186c 77.7%,
+		#18186c 88.8%,
+		#000000 88.8%,
+		#000000
+		);
+}
+#leather:before,
+#leather:after {
+	position: absolute;
+	content: "";
+	left: 70px;
+	top: 15px;
+	width: 40px;
+	height: 60px;
+	background: #e8003a;
+	border-radius: 50px 50px 0 0;
+	transform: rotate(-80deg);
+	transform-origin: 0 100%;
+}
+#leather:after {
+	left: 30px;
+	transform: rotate(10deg);
+	transform-origin: 100% 100%;
+}
+</code></pre>
+			</td>
+		</tr>
 	</table>
 
 	<style>
@@ -435,6 +491,7 @@
 
 		.flags td {
 			padding: 10px;
+			vertical-align: top;
 		}
 
 		.flags h2 {
@@ -681,6 +738,48 @@
 			position: absolute;
 			left: calc(50% - 40px);
 			top: calc(50% - 40px);
+		}
+
+		#leather {
+			background: linear-gradient(
+				to bottom,
+				#000000,
+				#000000 11.1%,
+				#18186c 11.1%,
+				#18186c 22.2%,
+				#000000 22.2%,
+				#000000 33.3%,
+				#18186c 33.3%,
+				#18186c 44.4%,
+				#ffffff 44.4%,
+				#ffffff 55.5%,
+				#18186c 55.5%,
+				#18186c 66.6%,
+				#000000 66.6%,
+				#000000 77.7%,
+				#18186c 77.7%,
+				#18186c 88.8%,
+				#000000 88.8%,
+				#000000
+				);
+		}
+		#leather:before,
+		#leather:after {
+			position: absolute;
+			content: "";
+			left: 70px;
+			top: 15px;
+			width: 40px;
+			height: 60px;
+			background: #e8003a;
+			border-radius: 50px 50px 0 0;
+			transform: rotate(-80deg);
+			transform-origin: 0 100%;
+		}
+		#leather:after {
+			left: 30px;
+			transform: rotate(10deg);
+			transform-origin: 100% 100%;
 		}
 	</style>
 </body>
