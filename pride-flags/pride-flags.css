@@ -543,3 +543,43 @@ pre {
 	top: calc(50% - 32px);
 	left: calc(50% - 18px);
 }
+
+#demigirl {
+	background: linear-gradient(
+		to bottom,
+		#7f7f7f,
+		#7f7f7f 14.29%,
+		#c3c3c3 14.29%,
+		#c3c3c3 28.57%,
+		#f3adc9 28.57%,
+		#f3adc9 42.86%,
+		#fff 42.86%,
+		#fff 57.14%,
+		#f3adc9 57.14%,
+		#f3adc9 71.43%,
+		#c3c3c3 71.43%,
+		#c3c3c3 85.71%,
+		#7f7f7f 85.71%,
+		#7f7f7f
+		);
+}
+
+#demiboy {
+	background: linear-gradient(
+		to bottom,
+		#7f7f7f,
+		#7f7f7f 14.29%,
+		#c3c3c3 14.29%,
+		#c3c3c3 28.57%,
+		#9ad9ea 28.57%,
+		#9ad9ea 42.86%,
+		#fff 42.86%,
+		#fff 57.14%,
+		#9ad9ea 57.14%,
+		#9ad9ea 71.43%,
+		#c3c3c3 71.43%,
+		#c3c3c3 85.71%,
+		#7f7f7f 85.71%,
+		#7f7f7f
+		);
+}
