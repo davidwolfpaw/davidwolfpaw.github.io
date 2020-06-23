@@ -21,8 +21,10 @@ pre {
 .menu ul {
 	background: #FFF;
 	border: 1px solid #333;
-	padding: 5px;
+	padding: 0;
 	position: fixed;
+	height: 300px;
+	overflow: scroll;
 }
 
 .menu li {
@@ -30,8 +32,12 @@ pre {
 }
 
 .menu li a {
-	margin-bottom: 10px;
+	padding: 10px 5px;
 	display: block;
+}
+
+.menu li:nth-child(2n) a {
+	background-color: #f0f0f0;
 }
 
 .wrapper {
