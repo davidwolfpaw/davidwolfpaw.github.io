@@ -10,9 +10,10 @@ body {
 
 pre {
 	width: 100%;
+	max-height: 400px;
 	padding: 10px;
 	margin: 0;
-	overflow: auto;
+	overflow: scroll;
 	background: #FFF;
 	border: 1px solid #333;
 	font-family: monospace;
