@@ -63,9 +63,26 @@ pre {
 		"header header header"
 		"flag flag-code flag-colors";
 	grid-gap: 10px;
-	justify-items: center;
+	justify-items: safe;
 	margin-bottom: 80px;
 	overflow-x: scroll;
+}
+@media( max-width:880px ) {
+	.flag-container {
+		justify-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"header"
+			"flag"
+			"flag-code"
+			"flag-colors";
+	}
+
+	.flag-colors {
+		display: flex;
+		flex-flow: wrap;
+		column-gap: 5px;
+	}
 }
 
 .flags h2 {
