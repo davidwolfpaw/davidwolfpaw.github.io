@@ -655,9 +655,51 @@ background: linear-gradient(
 </code></pre>
 			</td>
 		</tr>
+		
+		<tr>
+			<td colspan="2">
+				<h2>Demisexual Pride Flag</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="demisexual" class="flag"></div>
+			</td>
+			<td>
+<pre><code>
+#demisexual {
+	background: linear-gradient(
+		to bottom,
+		#ffffff,
+		#ffffff 40%,
+		#66226a 40%,
+		#66226a 60%,
+		#d3d1d4 60%,
+		#d3d1d4
+		);
+}
+#demisexual:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-right: 90px solid transparent;
+	border-bottom: 120px solid #000;
+	border-left: 90px solid transparent;
+	transform: rotate(90deg);
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: -30px;
+}
+</code></pre>
+			</td>
+		</tr>
 	</table>
 
 	<style>
+		body {
+			background-color: #ebebeb;
+		}
 		.flags {
 			margin: 0 auto;
 		}
@@ -1086,6 +1128,31 @@ background: linear-gradient(
 				#000000 91.67%,
 				#000000
 				);
+		}
+
+		#demisexual {
+			background: linear-gradient(
+				to bottom,
+				#ffffff,
+				#ffffff 40%,
+				#66226a 40%,
+				#66226a 60%,
+				#d3d1d4 60%,
+				#d3d1d4
+				);
+		}
+		#demisexual:before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-right: 90px solid transparent;
+			border-bottom: 120px solid #000;
+			border-left: 90px solid transparent;
+			transform: rotate(90deg);
+			display: block;
+			position: absolute;
+			top: 30px;
+			left: -30px;
 		}
 	</style>
 </body>
