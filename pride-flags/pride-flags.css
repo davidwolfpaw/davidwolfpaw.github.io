@@ -522,3 +522,24 @@ pre {
 	top: 30px;
 	left: -30px;
 }
+
+#polyamorous {
+	background: linear-gradient(
+		to bottom,
+		#001df5,
+		#001df5 33.33%,
+		#eb3323 33.33%,
+		#eb3323 66.66%,
+		#000 66.66%,
+		#000
+		);
+}
+#polyamorous:before {
+	content: "𝝅";
+	color: #fefb53;
+	font-size: 64px;
+	line-height: 1;
+	position: absolute;
+	top: calc(50% - 32px);
+	left: calc(50% - 18px);
+}
