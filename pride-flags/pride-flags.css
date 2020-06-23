@@ -54,7 +54,8 @@ pre {
     grid-template-areas: 
         "header header"
         "flag flag-code";
-    justify-content: space-around;
+    justify-items: center;
+    margin-bottom: 80px;
 }
 
 .flags h2 {
