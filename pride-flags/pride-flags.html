@@ -31,6 +31,7 @@
 				<li><a href="#demigirl-flag">Demigirl Pride Flag</a></li>
 				<li><a href="#demiboy-flag">Demiboy Pride Flag</a></li>
 				<li><a href="#bear-brotherhood-flag">Bear Brotherhood Flag</a></li>
+				<li><a href="#rubber-flag">Rubber Pride Flag</a></li>
 			</ul>
 		</div>
 
@@ -889,6 +890,68 @@
 					<div class="swatch" style="border-color: #fff;">#fff</div>
 					<div class="swatch" style="border-color: #565656;">#565656</div>
 					<div class="swatch" style="border-color: #000;">#000</div>
+				</div>
+			</div>
+			
+			<div id="rubber-flag" class="flag-container">
+				<h2>Rubber Pride Flag</h2>
+				<div id="rubber" class="flag"></div>
+				<div class="flag-code">
+					<pre><code>
+#rubber {
+	background: linear-gradient(to bottom,
+		#000000 18.5%, #c6101f 18.5%,
+		#c6101f 22.94%, #f3d900 22.94%,
+		#f3d900 37.592%, #c6101f 37.592%,
+		#c6101f 42.032%, #000000 42.032%,
+		#000000 56.684%, #c6101f 56.684%,
+		#c6101f 61.124%, #000000 61.124%
+	);
+}
+
+#rubber::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 18%;
+	left: 23%;
+	width: 45.3%;
+	height: 82%;
+	background: linear-gradient(55deg,
+		#000000 35.8%, #c6101f 35.8%,
+		#c6101f 39.894%, #000000 39.894%,
+		#000000 53.404%, #c6101f 53.404%,
+		#c6101f 57.498%, #f3d900 57.498%,
+		#f3d900 71.008%, #c6101f 71.008%,
+		#c6101f 75.102%, #000000 75.102%
+	);
+	clip-path: polygon(57% 0%, 100% 0%, 73% 100%, 0% 100%);
+}
+
+#rubber::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 18%;
+	left: 56.069%;
+	width: 43.931%;
+	height: 82%;
+	background: linear-gradient(-27deg,
+		#000000 25.5%, #c6101f 25.5%,
+		#c6101f 29.7%, #000000 29.7%,
+		#000000 43.56%, #c6101f 43.56%,
+		#c6101f 47.76%, #f3d900 47.76%,
+		#f3d900 61.62%, #c6101f 61.62%,
+		#c6101f 65.82%, #000000 65.82%
+	);
+	clip-path: polygon(27.7% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+					</code></pre>
+				</div>
+				<div class="flag-colors">
+					<div class="swatch" style="border-color: #000;">#000</div>
+					<div class="swatch" style="border-color: #c6101f;">#c6101f</div>
+					<div class="swatch" style="border-color: #f3d900;">#f4d044</div>
 				</div>
 			</div>
 
