@@ -6,6 +6,7 @@ html, * {
 
 body {
 	background-color: #ebebeb;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 pre {
@@ -19,12 +20,17 @@ pre {
 	font-family: monospace;
 }
 
+.menu h1 {
+	position: fixed;
+}
+
 .menu ul {
 	background: #FFF;
 	border: 1px solid #333;
 	padding: 0;
 	position: fixed;
-	height: 300px;
+	height: 50vh;
+	top: 6em;
 	overflow: scroll;
 }
 
@@ -41,72 +47,35 @@ pre {
 	background-color: #f0f0f0;
 }
 
-.button-menu li {
-	list-style: none;
-	margin-bottom: 20px;
-	position: relative;
-}
-
-.button-menu li a {
-	padding: 10px 20px;
-	display: inline-block;
-	text-decoration: none;
-	width: 300px;
-    height: 180px;
-}
-
-.button-menu li a span {
-	background: #fff;
-	color: #000;
-	font-weight: 700;
-	font-size: 2em;
-	padding: 10px;
-	margin: 10px;
-	opacity: 0.8;
-	display: inline-block;
-}
-
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
 	padding: 20px;
 	display: grid;
-	grid-template-columns: 180px 1fr;
+	grid-template-columns: 200px 1fr;
 	justify-content: space-between;
+	grid-column-gap: 20px;
 }
 
 /* Styles for the flags container */
 .flags {
-	/* margin: 0 auto; */
+	margin: 0 auto;
 }
 
 .flag-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto;
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas: 
-		"header header header"
-		"flag flag-code flag-colors";
-	grid-gap: 10px;
+		"header header"
+		"flag flag-details"
+		"flag-code flag-colors";
+	grid-gap: 20px;
 	justify-items: safe;
 	margin-bottom: 80px;
 }
-@media( max-width:880px ) {
-	.flag-container {
-		justify-items: center;
-		grid-template-columns: 1fr;
-		grid-template-areas: 
-			"header"
-			"flag"
-			"flag-code"
-			"flag-colors";
-	}
 
-	.flag-colors {
-		display: flex;
-		flex-flow: wrap;
-		column-gap: 5px;
-	}
+.flag-container > div {
+	max-width: 300px;
 }
 
 .flags h2 {
@@ -117,6 +86,11 @@ pre {
 
 .flag {
 	grid-area: flag;
+}
+
+.flag-details {
+	grid-area: flag-details;
+	font-size: 1.25em;
 }
 
 .flag-code {
@@ -135,6 +109,37 @@ pre {
 	padding: 5px;
 	background: #fff;
 	margin-bottom: 5px;
+}
+
+@media( max-width:880px ) {
+	.flag-container {
+		justify-items: center;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			"header"
+			"flag"
+			"flag-details"
+			"flag-code"
+			"flag-colors";
+	}
+
+	.flag-colors {
+		display: flex;
+		flex-flow: wrap;
+		column-gap: 5px;
+	}
+}
+
+@media( max-width:560px ) {
+	.wrapper {
+		display: block;
+	}
+
+	.menu h1,
+	.menu ul {
+		position: relative;
+		top: 0;
+	}
 }
 
 /* Styles for all flags */
@@ -413,7 +418,7 @@ pre {
 	transform-origin: 100% 100%;
 }
 
-#progressive {
+#progress {
 	background: linear-gradient(
 		to bottom,
 		#e40303,
@@ -431,7 +436,7 @@ pre {
 		);
 	overflow: hidden;
 }
-#progressive:before {
+#progress:before {
 	position: absolute;
 	content: "";
 	left: -31%;
@@ -454,7 +459,7 @@ pre {
 	transform: rotate(-135deg) skew(-45deg);
 	transform-origin: 100% 100%;
 }
-#progressive:after {
+#progress:after {
 	position: absolute;
 	content: "";
 	left: -1%;
@@ -478,7 +483,7 @@ pre {
 	transform-origin: 100% 100%;
 }
 
-#puppy {
+#pup {
 	background: linear-gradient(
 		30deg,
 		#000000,
@@ -501,7 +506,7 @@ pre {
 		#000000
 		);
 }
-#puppy:before {
+#pup:before {
 	content: "";
 	position: absolute;
 	top: 62px;
@@ -516,7 +521,7 @@ pre {
 	background-size: 40px 30px;
 	background-repeat: no-repeat
 }
-#puppy:after {
+#pup:after {
 	content: "";
 	position: absolute;
 	top: calc(50% - 20px);
@@ -636,23 +641,25 @@ pre {
 	background: linear-gradient(
 		to bottom,
 		#4e2f10,
-		#4e2f10 16.67%,
-		#d5520a 16.67%,
-		#d5520a 33.33%,
-		#f4d044 33.33%,
-		#f4d044 50%,
-		#dac391 50%,
-		#dac391 66.67%,
-		#fff 66.67%,
-		#fff 83.33%,
-		#565656 83.33%,
-		#565656
+		#4e2f10 14.29%,
+		#d5520a 14.29%,
+		#d5520a 28.57%,
+		#f4d044 28.57%,
+		#f4d044 42.86%,
+		#dac391 42.86%,
+		#dac391 57.14%,
+		#fff 57.14%,
+		#fff 71.43%,
+		#565656 71.43%,
+		#565656 85.71%,
+		#000 85.71%,
+		#000
 		);
 }
 #bear-brotherhood:before {
 	content: "";
 	position: absolute;
-	top: 20px;
+	top: 10px;
 	left: 20px;
 	width :100px;
 	height :90px;
