@@ -41,6 +41,31 @@ pre {
 	background-color: #f0f0f0;
 }
 
+.button-menu li {
+	list-style: none;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.button-menu li a {
+	padding: 10px 20px;
+	display: inline-block;
+	text-decoration: none;
+	width: 300px;
+    height: 180px;
+}
+
+.button-menu li a span {
+	background: #fff;
+	color: #000;
+	font-weight: 700;
+	font-size: 2em;
+	padding: 10px;
+	margin: 10px;
+	opacity: 0.8;
+	display: inline-block;
+}
+
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
@@ -409,10 +434,10 @@ pre {
 #progressive:before {
 	position: absolute;
 	content: "";
-	left: -94px;
-	top: -91px;
-	width: 130px;
-	height: 90px;
+	left: -31%;
+	top: calc(-50% - 1px);
+	width: 43%;
+	height: 50%;
 	background: linear-gradient(
 		to bottom,
 		#FFF,
@@ -432,10 +457,10 @@ pre {
 #progressive:after {
 	position: absolute;
 	content: "";
-	left: -3px;
-	top: 0px;
-	width: 130px;
-	height: 90px;
+	left: -1%;
+	top: 0;
+	width: 43%;
+	height: 50%;
 	background: linear-gradient(
 		to bottom,
 		#FFF,
