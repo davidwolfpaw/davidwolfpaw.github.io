@@ -65,7 +65,6 @@ pre {
 	grid-gap: 10px;
 	justify-items: safe;
 	margin-bottom: 80px;
-	overflow-x: scroll;
 }
 @media( max-width:880px ) {
 	.flag-container {
