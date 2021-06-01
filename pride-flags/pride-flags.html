@@ -626,27 +626,12 @@
 				<div class="flag-code">
 					<pre><code>
 #intersex {
-	background: #ffd800;
-}
-#intersex:before {
-	width: 100px;
-	height: 100px;
-	background: #7902aa;
-	border-radius: 50%;
-	content: "";
-	position: absolute;
-	left: calc(50% - 50px);
-	top: calc(50% - 50px);
-}
-#intersex:after {
-	width: 80px;
-	height: 80px;
-	background: #ffd800;
-	border-radius: 50%;
-	content: "";
-	position: absolute;
-	left: calc(50% - 40px);
-	top: calc(50% - 40px);
+	background: radial-gradient(closest-side circle at center,
+		transparent 44%,
+		#7902aa 44%,
+		#7902aa 56%,
+		transparent 56%
+	), #ffd800;
 }
 					</code></pre>
 				</div>
