@@ -43,7 +43,7 @@ pre {
 
 .navigation-menu {
 	background: #fff;
-	height: 100vh;
+	height: auto;
 	width: 50%;
 	margin: 0;
 	padding: 0;
@@ -105,7 +105,7 @@ input#toggle:checked + ul.navigation-menu {
 }
 
 /* Also slide content when checkbox is checked */
-input#toggle:checked ~ .content {
+input#toggle:checked ~ .flags {
 	left: -50%;
 }
 
@@ -113,6 +113,9 @@ input#toggle:checked ~ .content {
 .flags {
 	margin: 0 auto;
 	max-width: 660px;
+	left: 0;
+	transition: all 0.5s; 
+	position: relative;
 }
 
 .flag-container {
