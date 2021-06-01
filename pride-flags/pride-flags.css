@@ -189,7 +189,7 @@ input#toggle:checked ~ .flags {
 
 @media( max-width: 620px ) {
 	.wrapper {
-		display: block;
+		padding: 5px;
 	}
 
 	.menu h1,
