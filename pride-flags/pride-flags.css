@@ -178,6 +178,7 @@ input#toggle:checked ~ .flags {
 			"flag-details"
 			"flag-code"
 			"flag-colors";
+		padding: 10px;
 	}
 
 	.flag-colors {
@@ -185,9 +186,7 @@ input#toggle:checked ~ .flags {
 		flex-flow: wrap;
 		column-gap: 5px;
 	}
-}
 
-@media( max-width: 620px ) {
 	.wrapper {
 		padding: 5px;
 	}
