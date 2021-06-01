@@ -5,8 +5,19 @@ html, * {
 }
 
 body {
-	background-color: #ebebeb;
+	background-color: #fff;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 1.25em;
+}
+
+a {
+	color: #820080;
+}
+
+a:active,
+a:focus,
+a:hover {
+	color: #ff218c;
 }
 
 pre {
@@ -18,48 +29,90 @@ pre {
 	background: #FFF;
 	border: 1px solid #333;
 	font-family: monospace;
-}
-
-.menu h1 {
-	position: fixed;
-}
-
-.menu ul {
-	background: #FFF;
-	border: 1px solid #333;
-	padding: 0;
-	position: fixed;
-	height: 50vh;
-	top: 6em;
-	overflow: scroll;
-}
-
-.menu li {
-	list-style: none;  
-}
-
-.menu li a {
-	padding: 10px 5px;
-	display: block;
-}
-
-.menu li:nth-child(2n) a {
-	background-color: #f0f0f0;
+	tab-size: 2;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
 }
 
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
 	padding: 20px;
-	display: grid;
-	grid-template-columns: 200px 1fr;
-	justify-content: space-between;
-	grid-column-gap: 20px;
+	position: relative;
+}
+
+.navigation-menu {
+	background: #fff;
+	height: 100vh;
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	position: fixed;
+	right: -50%;
+	top: 0;
+	transition: all 0.5s;
+	z-index: 2;
+	overflow-y: scroll;
+}
+
+.navigation-menu li {
+  padding: 10px 0;
+  background: rgba(92, 206, 250, 0.5);
+}
+
+.navigation-menu li:nth-of-type(2n) {
+	background: rgba(246, 168, 183, 0.5);
+}
+
+.navigation-menu li:hover,
+.navigation-menu li:focus {
+	background: rgba(254, 216, 0, 0.5);
+}
+
+.navigation-menu a {
+	color: #111;
+	text-decoration: none;
+	display: block;
+	transition:all 0.3s;
+}
+
+.navbar {
+	position: fixed;
+	top: 20px;
+	z-index: 4;
+}
+
+/* Hide the checkbox */
+#toggle {
+	display: none; 
+}
+
+/* Use this label to toggle the sliding menu */
+label[for="toggle"] {
+	cursor: pointer;
+	font-size: 1em;
+	padding: 0.5em 0.25em;
+	background-color: #fff;
+	border: 1px solid #333;
+	border-radius: 0.25em;
+}
+
+/* Slide menu when checkbox is checked */
+input#toggle:checked + ul.navigation-menu {
+	right: 0;
+}
+
+/* Also slide content when checkbox is checked */
+input#toggle:checked ~ .content {
+	left: -50%;
 }
 
 /* Styles for the flags container */
 .flags {
 	margin: 0 auto;
+	max-width: 660px;
 }
 
 .flag-container {
@@ -72,6 +125,9 @@ pre {
 	grid-gap: 20px;
 	justify-items: safe;
 	margin-bottom: 80px;
+	padding: 20px;
+	background-color: #f2f2f2;
+	border: 3px solid #d5d5d5;
 }
 
 .flag-container > div {
@@ -80,7 +136,7 @@ pre {
 
 .flags h2 {
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 0;
 	grid-area: header;
 }
 
@@ -90,17 +146,15 @@ pre {
 
 .flag-details {
 	grid-area: flag-details;
-	font-size: 1.25em;
 }
 
 .flag-code {
 	grid-area: flag-code;
-	max-width: 300px
+	z-index: 1;
 }
 
 .flag-colors {
 	grid-area: flag-colors;
-	max-width: 300px
 }
 
 .swatch {
@@ -111,7 +165,7 @@ pre {
 	margin-bottom: 5px;
 }
 
-@media( max-width:880px ) {
+@media( max-width: 660px ) {
 	.flag-container {
 		justify-items: center;
 		grid-template-columns: 1fr;
@@ -130,7 +184,7 @@ pre {
 	}
 }
 
-@media( max-width:560px ) {
+@media( max-width: 620px ) {
 	.wrapper {
 		display: block;
 	}
