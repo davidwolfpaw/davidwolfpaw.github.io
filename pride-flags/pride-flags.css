@@ -607,6 +607,30 @@ input#toggle:checked ~ .flags {
 		);
 }
 
+#queer {
+	background: linear-gradient(
+		to bottom,
+		#000,
+		#000 11.11%,
+		#9ad9eb 11.11%,
+		#9ad9eb 22.22%,
+		#00a4e7 22.22%,
+		#00a4e7 33.33%,
+		#b5e61d 33.33%,
+		#b5e61d 44.44%,
+		#fff 44.44%,
+		#fff 55.55%,
+		#ffc90c 55.55%,
+		#ffc90c 66.66%,
+		#fc6666 66.66%,
+		#fc6666 77.77%,
+		#feafc9 77.77%,
+		#feafc9 88.88%,
+		#000 88.88%,
+		#000
+		);
+}
+
 #demisexual {
 	background: linear-gradient(
 		to bottom,
