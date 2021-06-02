@@ -607,6 +607,22 @@ input#toggle:checked ~ .flags {
 		);
 }
 
+#plushgender {
+	background: linear-gradient(
+		to bottom,
+		#bdc4e0,
+		#bdc4e0 20%,
+		#ffe197 20%,
+		#ffe197 40%,
+		#fff9d8 40%,
+		#fff9d8 60%,
+		#ffd6aa 60%,
+		#ffd6aa 80%,
+		#ffb699 80%,
+		#ffb699
+		);
+}
+
 #queer {
 	background: linear-gradient(
 		to bottom,
