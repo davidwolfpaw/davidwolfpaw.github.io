@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<script src="dom-to-image.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="bingo-card">
+            <div id="bingo-card-header">
+                Something About Furries
+            </div>
+            <div id="bingo-card-body">
+                <label><input type="checkbox" id="wolf" name="wolf" value="Wolf"><span><input type="text" value="Wolf" /></span></label>
+                <label><input type="checkbox" id="bear" name="bear" value="Bear"><span>Bear</span></label>
+                <label><input type="checkbox" id="snake" name="snake" value="Snake"><span>Snake</span></label>
+                <label><input type="checkbox" id="tiger" name="tiger" value="Tiger"><span>Tiger</span></label>
+                <label><input type="checkbox" id="bird" name="bird" value="Bird"><span>Bird</span></label>
+                <label><input type="checkbox" id="badger" name="badger" value="Badger"><span>Badger</span></label>
+                <label><input type="checkbox" id="mouse" name="mouse" value="Mouse"><span>Mouse</span></label>
+                <label><input type="checkbox" id="cat" name="cat" value="Cat"><span>Cat</span></label>
+                <label><input type="checkbox" id="otter" name="otter" value="Otter"><span>Otter</span></label>
+                <label><input type="checkbox" id="goat" name="goat" value="Goat"><span>Goat</span></label>
+                <label><input type="checkbox" id="taur" name="taur" value="Taur"><span>Taur</span></label>
+                <label><input type="checkbox" id="raccoon" name="raccoon" value="Raccoon"><span>Raccoon</span></label>
+                <label><input type="checkbox" id="free" name="free" value="FREE"><span>FREE</span></label>
+                <label><input type="checkbox" id="panda" name="panda" value="Panda"><span>Panda</span></label>
+                <label><input type="checkbox" id="rat" name="rat" value="Rat"><span>Rat</span></label>
+                <label><input type="checkbox" id="snep" name="snep" value="Snep"><span>Snep</span></label>
+                <label><input type="checkbox" id="dragon" name="dragon" value="Dragon"><span>Dragon</span></label>
+                <label><input type="checkbox" id="dog" name="dog" value="Dog"><span>Dog</span></label>
+                <label><input type="checkbox" id="fox" name="fox" value="Fox"><span>Fox</span></label>
+                <label><input type="checkbox" id="bunny" name="bunny" value="Bunny"><span>Bunny</span></label>
+                <label><input type="checkbox" id="bull" name="bull" value="Bull"><span>Bull</span></label>
+                <label><input type="checkbox" id="bat" name="bat" value="Bat"><span>Bat</span></label>
+                <label><input type="checkbox" id="coyote" name="coyote" value="Coyote"><span>Coyote</span></label>
+                <label><input type="checkbox" id="lizard" name="lizard" value="Lizard"><span>Lizard</span></label>
+                <label><input type="checkbox" id="hyena" name="hyena" value="Hyena"><span>Hyena</span></label>
+            </div>
+        </div>
+        <div id="preview-image"></div>
+        <button id="save-button">Save as image</button>
+    </div>
+
+	<script>
+    let bingoCard = document.getElementById("bingo-card");
+    let saveButton = document.getElementById("save-button");
+    let previewImage = document.getElementById("preview-image");
+
+
+    saveButton.addEventListener('click', function(event) {
+        domtoimage.toJpeg(bingoCard, { quality: 0.95 })
+            .then(function (dataUrl) {
+                var link = document.createElement('a');
+                link.download = 'my-image-name.jpeg';
+                link.href = dataUrl;
+                link.click();
+            });
+        // Hide the save button to avoid duplication
+        // saveButton.style.visibility="hidden"
+    });
+	</script>
+    <style>
+        body {
+            background-color: #fff;
+        }
+        .wrapper {
+            text-align: center;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-around;
+            margin: 0 auto;
+            width: max-content;
+        }
+        #bingo-card {
+            background-color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            padding: 20px;
+            position: relative;
+            width: 502px;
+            z-index: 1;
+        }
+        #bingo-card-header {
+            border: 2px solid;
+            border-bottom: none;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+        #bingo-card-body {
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(5, 120px);
+            width: max-content;
+            margin: 0 auto;
+        }
+        #bingo-card label {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            cursor: pointer;
+            width: 100px;
+            height: 120px;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+        #bingo-card input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        #bingo-card input[type="checkbox"]:checked + span:after {
+            background-color: rgba(255, 145, 145, 0.5);
+            box-shadow: 0px 0 12px 6px rgba(255, 145, 145, 0.5) inset;
+            height: 100%;
+            width: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        /* #bingo-card input[type="checkbox"]:checked + span:after {
+            background-color: rgba(255, 145, 145, 0.5);
+            box-shadow: 0px 0 12px 6px rgba(255, 145, 145, 0.5) inset;
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            content: "";
+            position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 40px);
+            z-index: 1;
+            font-size: 80px;
+            line-height: 1;
+        } */
+        /* #bingo-card input[type="checkbox"]#wolf:checked + span:after {content: "🐺";}
+        #bingo-card input[type="checkbox"]#bear:checked + span:after {content: "🐻";}
+        #bingo-card input[type="checkbox"]#snake:checked + span:after {content: "🐍";}
+        #bingo-card input[type="checkbox"]#tiger:checked + span:after {content: "🐯";}
+        #bingo-card input[type="checkbox"]#bird:checked + span:after {content: "🐦";}
+        #bingo-card input[type="checkbox"]#badger:checked + span:after {content: "🦡";}
+        #bingo-card input[type="checkbox"]#mouse:checked + span:after {content: "🐭";}
+        #bingo-card input[type="checkbox"]#cat:checked + span:after {content: "😸";}
+        #bingo-card input[type="checkbox"]#otter:checked + span:after {content: "❓";}
+        #bingo-card input[type="checkbox"]#goat:checked + span:after {content: "🐐";}
+        #bingo-card input[type="checkbox"]#taur:checked + span:after {content: "♉";}
+        #bingo-card input[type="checkbox"]#raccoon:checked + span:after {content: "🦝";}
+        #bingo-card input[type="checkbox"]#free:checked + span:after {content: "🆓";}
+        #bingo-card input[type="checkbox"]#panda:checked + span:after {content: "🐼";}
+        #bingo-card input[type="checkbox"]#rat:checked + span:after {content: "🐀";}
+        #bingo-card input[type="checkbox"]#snep:checked + span:after {content: "🐆";}
+        #bingo-card input[type="checkbox"]#dragon:checked + span:after {content: "🐲";}
+        #bingo-card input[type="checkbox"]#dog:checked + span:after {content: "🐶";}
+        #bingo-card input[type="checkbox"]#fox:checked + span:after {content: "🦊";}
+        #bingo-card input[type="checkbox"]#bunny:checked + span:after {content: "🐰";}
+        #bingo-card input[type="checkbox"]#bull:checked + span:after {content: "🐮";}
+        #bingo-card input[type="checkbox"]#bat:checked + span:after {content: "🦇";}
+        #bingo-card input[type="checkbox"]#coyote:checked + span:after {content: "🐾";}
+        #bingo-card input[type="checkbox"]#lizard:checked + span:after {content: "🦎";}
+        #bingo-card input[type="checkbox"]#hyena:checked + span:after {content: "❓";} */
+        #save-button {
+            padding: 20px;
+            font-size: 24px;
+            margin-top: 20px;
+            grid-column: span 2;
+        }
+    </style>
+</body>
+</html>
