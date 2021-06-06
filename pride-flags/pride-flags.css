@@ -44,7 +44,7 @@ pre {
 .navigation-menu {
 	overflow-y: scroll;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	top: 0;
 	right: -50%;
 	width: 50%;
@@ -55,6 +55,11 @@ pre {
 	text-align: center;
 	list-style: none;
 	transition: all 0.5s;
+}
+
+.navigation-menu:target {
+	display: block;
+	right: 0;
 }
 
 .navigation-menu li {
@@ -80,34 +85,26 @@ pre {
 
 .navbar {
 	position: fixed;
-	z-index: 4;
+	z-index: 2;
 	top: 20px;
+	right: 20px;
 }
 
-/* Hide the checkbox */
-#toggle {
-	display: none; 
-}
-
-/* Use this label to toggle the sliding menu */
-label[for="toggle"] {
+.menu-toggle {
+	display: block;
 	padding: 0.5em 0.25em;
 	border: 1px solid #333;
 	border-radius: 0.25em;
 	background-color: #fff;
 	font-size: 1em;
+	text-decoration: none;
 	cursor: pointer;
 }
 
-/* Slide menu when checkbox is checked */
-input#toggle:checked + ul.navigation-menu {
-	right: 0;
-}
-
 /* Also slide content when checkbox is checked */
-input#toggle:checked ~ .flags {
+/* input#toggle:checked ~ .flags {
 	left: -50%;
-}
+} */
 
 /* Styles for the flags container */
 .flags { 
