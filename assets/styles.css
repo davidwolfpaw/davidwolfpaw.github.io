@@ -1,0 +1,243 @@
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--black: #1a1a1a;
+	--white: #fff;
+	--blue: #55c1e7;
+	--pink: #e899c9;
+	--pink-light: #fff0fa;
+	--purple: #4f07aa;
+}
+
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+---------------------------------------------------------------------------- */
+/* stylelint-disable */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}
+/* stylelint-enable */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	background-color: var(--pink-light);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: var(--purple);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--purple);
+}
+
+ol {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+input[type="radio"] {
+	position: absolute;
+	left: -9999px;
+}
+
+/* Image
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+}
+
+figure {
+	position: relative;
+	margin: 0 0 10px 0;
+	break-inside: avoid;
+}
+
+figure > img {
+	grid-row: 1 / -1;
+	grid-column: 1;
+}
+
+figure a {
+	text-decoration: none;
+}
+
+figcaption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 0.5em 1em;
+	background-color: rgba(255,255,255,.9);
+}
+
+/* Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	/* column-count: 4;
+	column-gap: 10px; */
+}
+
+/* .gallery {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: masonry;
+	column-count: 4;
+	column-gap: 10px;
+} */
+
+.gallery {
+	break-inside: avoid;
+	column-count: 2;
+	column-gap: 1em;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+
+/* Filters
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.filters {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.filters * {
+	display: inline-block;
+}
+
+.filters label {
+	min-width: 50px;
+	margin-bottom: 0.25rem;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-size: 1.25em;
+	line-height: normal;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.filters label:hover {
+	color: var(--white);
+	background: var(--blue);
+}
+
+/* Filtering Rules
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+[value="All"]:checked ~ .filters [for="All"],
+[value="Ref"]:checked ~ .filters [for="Ref"],
+[value="Plush"]:checked ~ .filters [for="Plush"],
+[value="Icon"]:checked ~ .filters [for="Icon"],
+[value="Apps"]:checked ~ .filters [for="Apps"],
+[value="Slider"]:checked ~ .filters [for="Slider"],
+[value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
+	color: var(--white);
+	background: var(--blue);
+}
+
+[value="All"]:checked ~ .gallery [data-category] {
+	display: block;
+}
+
+[value="Ref"]:checked ~ .gallery li:not([data-category~="Ref"]),
+[value="Plush"]:checked ~ .gallery li:not([data-category~="Plush"]),
+[value="Icon"]:checked ~ .gallery li:not([data-category~="Icon"]),
+[value="Apps"]:checked ~ .gallery li:not([data-category~="Apps"]),
+[value="Slider"]:checked ~ .gallery li:not([data-category~="Slider"]),
+[value="fullPage.js"]:checked ~ .gallery li:not([data-category~="fullPage.js"]) {
+	display: none;
+}
+
+
+/* Lightbox
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.lightbox {
+	/* Default to hidden */
+	display: none;
+	/* Overlay entire screen */
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+	display: block;
+}
+
+.lightbox span {
+	/* Full width and height */
+	display: block;
+	width: 100%;
+	height: 100%;
+	/* Size and position background image */
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.social-links {
+	margin: 2em 0;
+}
+
+
+.social-links a {
+	display: inline-flex;
+	padding: 0 0.5em 0;
+	text-decoration: none;
+	align-items: center;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+	text-decoration: underline;
+}
+
+
+.social-links a svg {
+	max-width: 24px;
+	max-height: 24px;
+	margin-right: 0.25em;
+}
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (min-width: 600px) {
+
+	.gallery {
+		column-count: 3;
+	}
+
+}
+@media screen and (min-width: 960px) {
+
+	.gallery {
+		column-count: 4;
+	}
+
+}
