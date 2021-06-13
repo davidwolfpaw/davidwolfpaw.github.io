@@ -410,11 +410,11 @@ input#toggle:checked ~ .flags {
 
 #intersex {
 	background: radial-gradient(closest-side circle at center,
-		transparent 44%,
+		#ffd800 44%,
 		#7902aa 44%,
 		#7902aa 56%,
-		transparent 56%
-	), #ffd800;
+		#ffd800 56%
+	);
 }
 
 #leather {
