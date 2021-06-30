@@ -143,7 +143,9 @@ header {
 [value="Ref"]:checked ~ .filters [for="Ref"],
 [value="Plush"]:checked ~ .filters [for="Plush"],
 [value="Icon"]:checked ~ .filters [for="Icon"],
+[value="Animated"]:checked ~ .filters [for="Animated"],
 [value="Apps"]:checked ~ .filters [for="Apps"],
+[value="Partner"]:checked ~ .filters [for="Partner"],
 [value="Slider"]:checked ~ .filters [for="Slider"],
 [value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
 	color: var(--white);
@@ -157,7 +159,9 @@ header {
 [value="Ref"]:checked ~ .gallery li:not([data-category~="Ref"]),
 [value="Plush"]:checked ~ .gallery li:not([data-category~="Plush"]),
 [value="Icon"]:checked ~ .gallery li:not([data-category~="Icon"]),
+[value="Animated"]:checked ~ .gallery li:not([data-category~="Animated"]),
 [value="Apps"]:checked ~ .gallery li:not([data-category~="Apps"]),
+[value="Partner"]:checked ~ .gallery li:not([data-category~="Partner"]),
 [value="Slider"]:checked ~ .gallery li:not([data-category~="Slider"]),
 [value="fullPage.js"]:checked ~ .gallery li:not([data-category~="fullPage.js"]) {
 	display: none;
