@@ -1,12 +1,12 @@
 /* Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-	--black: #1a1a1a;
-	--white: #fff;
-	--blue: #55c1e7;
-	--pink: #e899c9;
-	--pink-light: #fff0fa;
-	--purple: #4f07aa;
+	--black: 26, 26, 26;
+	--white: 255, 255, 255;
+	--blue: 85, 193, 231;
+	--pink: 232, 153, 201;
+	--pink-light: 255, 240, 250;
+	--purple: 79, 7, 170;
 }
 
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
@@ -21,23 +21,23 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 body {
 	width: 100vw;
-	background-color: var(--pink-light);
+	background-color: rgb(var(--pink-light));
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 a {
-	color: var(--purple);
+	color: rgb(var(--purple));
 }
 
 h1,
 h2,
 h3 {
-	color: var(--purple);
+	color: rgb(var(--purple));
 }
 
 ol {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	list-style: none;
 }
 
@@ -83,8 +83,6 @@ figcaption {
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
-	/* column-count: 4;
-	column-gap: 10px; */
 }
 
 /* .gallery {
@@ -105,8 +103,8 @@ figcaption {
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
-	text-align: center;
 	margin-bottom: 4em;
+	text-align: center;
 }
 
 
@@ -133,8 +131,8 @@ header {
 }
 
 .filters label:hover {
-	color: var(--white);
-	background: var(--blue);
+	color: rgb(var(--white));
+	background: rgb(var(--blue));
 }
 
 /* Filtering Rules
@@ -148,8 +146,8 @@ header {
 [value="Partner"]:checked ~ .filters [for="Partner"],
 [value="Slider"]:checked ~ .filters [for="Slider"],
 [value="fullPage.js"]:checked ~ .filters [for="fullPage.js"] {
-	color: var(--white);
-	background: var(--blue);
+	color: rgb(var(--white));
+	background: rgb(var(--blue));
 }
 
 [value="All"]:checked ~ .gallery [data-category] {
@@ -202,7 +200,7 @@ header {
 }
 
 
-/* Misc
+/* Social
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .social-links {
 	margin: 2em 0;
@@ -226,6 +224,16 @@ header {
 	max-width: 24px;
 	max-height: 24px;
 	margin-right: 0.25em;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+	overflow: auto;
+	margin-top: 4em;
+	color: rgb(var(--black));
+	background-color: rgba( var(--blue), 0.8 );
+	text-align: center;
 }
 
 
