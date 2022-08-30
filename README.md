@@ -9,6 +9,13 @@ I specifically tried to make JavaScript-like interactions with only HTML and CSS
 
 [https://plush.dog/](https://plush.dog/)
 
+## Concepts
+I'm calling little things that I make to play with web code, "concepts".
+
+Here's some of the different concepts that I've come up with:
+
+- [Trans colored button inspired by "Boo, Bitch"](https://plush.dog/concepts/trans-button.html)
+
 ## Pride Flags
 
 I wanted to show how you can use CSS backgrounds and pseudo classes to do fun design on single elements. This is a collection of Pride flags, and I can add more as suggested.
