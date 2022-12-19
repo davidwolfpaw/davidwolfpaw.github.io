@@ -367,11 +367,8 @@ pre {
 	left: 0;
 	width: 100%;
 	height: 100%;
-
-	/* border-right: 50px solid transparent;
-		border-left: 50px solid transparent; */
 	background: linear-gradient(
-		to top left,
+		to top,
 		#000,
 		#000 25%,
 		#a3a3a3 25%,
@@ -381,6 +378,7 @@ pre {
 		#820080 75%,
 		#820080
 	);
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
 	content: "";
 }
 
